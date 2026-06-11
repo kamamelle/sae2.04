@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+    DocumentRoot /var/www/jurisnova
+
+    ErrorLog ${APACHE_LOG_DIR}/jurisnova_error.log
+    CustomLog ${APACHE_LOG_DIR}/jurisnova_access.log combined
+
+    <Directory /var/www/jurisnova>
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
